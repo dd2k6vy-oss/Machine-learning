@@ -1,26 +1,26 @@
-# 🎨 Nhận Dạng Màu Sắc trong Điều Kiện Ánh Sáng Thay Đổi
+#  Nhận Dạng Màu Sắc trong Điều Kiện Ánh Sáng Thay Đổi
 
 > **Machine Learning & Robotics Project (A4)**  
 > Phân loại 6 màu sắc cơ bản bằng CNN với độ chính xác **93.23%**
 
 ---
 
-## 📋 Mô Tả
+##  Mô Tả
 
 Robot nhận dạng màu sắc của vật thể trong điều kiện ánh sáng thay đổi và phân loại thành 6 nhóm màu. Thay vì dùng ngưỡng HSV cố định (dễ sai khi ánh sáng thay đổi), dự án sử dụng **CNN** để học đặc trưng màu sắc bền vững hơn.
 
 | Nhãn | Màu |
 |------|-----|
-| 1 | 🔴 Đỏ (Red) |
-| 2 | 🟠 Cam (Orange) |
-| 3 | 🟡 Vàng (Yellow) |
-| 4 | 🟢 Xanh lá (Green) |
-| 5 | 🔵 Xanh dương (Blue) |
-| 6 | 🩷 Hồng (Pink) |
+| 1 |  Đỏ (Red) |
+| 2 |  Cam (Orange) |
+| 3 |  Vàng (Yellow) |
+| 4 |  Xanh lá (Green) |
+| 5 |  Xanh dương (Blue) |
+| 6 |  Hồng (Pink) |
 
 ---
 
-## 📁 Cấu Trúc Dataset
+##  Cấu Trúc Dataset
 
 Dataset được **sinh tự động bằng Python** (không cần chụp ảnh thực tế), mô phỏng 10 điều kiện ánh sáng:
 
@@ -43,7 +43,7 @@ dataset/
 
 ---
 
-## 🧠 Kiến Trúc Mô Hình (CNN)
+##  Kiến Trúc Mô Hình (CNN)
 
 ```
 Input (64x64x3)
@@ -73,7 +73,7 @@ Dense(6, Softmax) → Output (6 classes)
 
 ---
 
-## 📊 Kết Quả
+##  Kết Quả
 
 ### Độ Chính Xác Tổng Thể
 
@@ -82,7 +82,7 @@ Dense(6, Softmax) → Output (6 classes)
 | Train | ~91% | ~0.20 |
 | Validation | **93.23%** | ~0.19 |
 
-> ✅ Validation accuracy cao hơn train → mô hình **không bị overfitting**
+>  Validation accuracy cao hơn train → mô hình **không bị overfitting**
 
 ### Kết Quả Theo Từng Màu
 
@@ -98,7 +98,7 @@ Dense(6, Softmax) → Output (6 classes)
 
 ---
 
-## 🤖 Demo Real-Time (Mô Phỏng Robot)
+##  Demo Real-Time (Mô Phỏng Robot)
 
 Pipeline xử lý trên robot (Python + OpenCV):
 
@@ -133,7 +133,7 @@ python demo.py
 
 ---
 
-## ✅ Kết Luận
+##  Kết Luận
 
 **Đã đạt được:**
 - Pipeline hoàn chỉnh: sinh dataset → train → demo real-time
@@ -150,11 +150,3 @@ python demo.py
 - Bổ sung ảnh thực tế vào dataset
 - Tích hợp robot phân loại sản phẩm trên băng chuyền
 
----
-
-## 🔗 Tài Nguyên
-
-| Tài nguyên | Link |
-|------------|------|
-| GitHub | [github.com/yourusername/color-recognition](https://github.com/yourusername/color-recognition) |
-| Video Demo | [youtube.com/...](https://youtube.com/...) |
